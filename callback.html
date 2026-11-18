@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>hochzeitclip tool - TikTok Login</title>
+<style>body{font-family:-apple-system,sans-serif;max-width:560px;margin:40px auto;padding:0 16px}code{display:block;word-break:break-all;background:#f2f2f2;padding:12px;border-radius:8px;font-size:15px}button{margin-top:12px;padding:10px 16px;font-size:16px}</style>
+</head><body>
+<h1>hochzeitclip tool</h1>
+<div id="out"></div>
+<script>
+var p=new URLSearchParams(location.search),c=p.get('code'),e=p.get('error'),o=document.getElementById('out');
+if(c){o.innerHTML='<p>TikTok-Login erfolgreich. Kopiere diesen Code und schicke ihn deinem Telegram-Bot:</p><code id="c"></code><button onclick="navigator.clipboard.writeText(document.getElementById(\'c\').textContent)">Kopieren</button>';document.getElementById('c').textContent=c;}
+else if(e){o.textContent='Fehler: '+e+' '+(p.get('error_description')||'');}
+else{o.textContent='Diese Seite empfängt den Login-Code von TikTok.';}
+</script>
+</body></html>
